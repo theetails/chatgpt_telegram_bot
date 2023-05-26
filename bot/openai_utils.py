@@ -2,8 +2,15 @@ import config
 
 import tiktoken
 import openai
-openai.api_key = config.openai_api_key
-
+# openai.api_key = config.openai_api_key
+# Need to import python library for local AI
+# And set configs to point to localAI
+# Probably all in the setup
+# openai.api_type = "azure" Probably shouldn't set this to azure
+# openai.api_key = "..."
+# openai.api_base = "https://example-endpoint.openai.azure.com"
+# openai.api_version = "2023-05-15"
+# Might be possible?? This is the default azure setup you can use for another api.... so might work
 
 OPENAI_COMPLETION_OPTIONS = {
     "temperature": 0.7,

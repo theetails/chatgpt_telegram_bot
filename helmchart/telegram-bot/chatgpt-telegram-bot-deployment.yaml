@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: chatgpt-telegram-bot
+  name: chatgpt-telegram-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: chatgpt-telegram-bot
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.service: chatgpt-telegram-bot
+    spec:
+      containers:
+      - args:
+        - python3
+        - bot/bot.py
+        image: chatgpt-telegram-bot
+        name: chatgpt-telegram-bot
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+      restartPolicy: Always
+status: {}
