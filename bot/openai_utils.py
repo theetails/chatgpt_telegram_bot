@@ -11,6 +11,7 @@ import openai
 # openai.api_base = "https://example-endpoint.openai.azure.com"
 # openai.api_version = "2023-05-15"
 # Might be possible?? This is the default azure setup you can use for another api.... so might work
+# TODO:: Add this to the config, then add that shit to the helm/kubernetes charts/yaml
 
 OPENAI_COMPLETION_OPTIONS = {
     "temperature": 0.7,
