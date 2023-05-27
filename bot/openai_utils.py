@@ -6,10 +6,10 @@ import openai
 # Need to import python library for local AI
 # And set configs to point to localAI
 # Probably all in the setup
-# openai.api_type = "azure" Probably shouldn't set this to azure
-# openai.api_key = "..."
-# openai.api_base = "https://example-endpoint.openai.azure.com"
-# openai.api_version = "2023-05-15"
+openai.api_type = config.alt_type
+openai.api_key = config.alt_key
+openai.api_base = config.alt_base
+openai.api_version = config.alt_version
 # Might be possible?? This is the default azure setup you can use for another api.... so might work
 # TODO:: Add this to the config, then add that shit to the helm/kubernetes charts/yaml
 
